@@ -1,0 +1,1041 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#39040b">
+
+  <title>Bijaya Dashami | A Festival of Victory</title>
+  <meta name="description" content="Celebrate the beauty, history and traditions of Bijaya Dashami. Sending love, happiness and blessings to Nepal and the world.">
+  <meta property="og:title" content="Happy Bijaya Dashami 🇳🇵">
+  <meta property="og:description" content="A little letter on a kite, carrying Dashain wishes to everyone.">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@400;600;700&display=swap');
+
+    :root {
+      --wine: #39040b;
+      --wine-light: #64101a;
+      --red: #9f1d28;
+      --gold: #e7bd70;
+      --gold-light: #f8e8bd;
+      --cream: #fff9ed;
+      --muted: #c9b6a3;
+      --panel: rgba(255, 249, 237, .045);
+      --border: rgba(231, 189, 112, .24);
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'DM Sans', sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--cream);
+      background: var(--wine);
+      font-family: var(--sans);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    button { font: inherit; }
+
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    button:focus-visible, a:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 5px;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 44px));
+      margin: auto;
+    }
+
+    .gold { color: var(--gold); }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: .7rem;
+      letter-spacing: .23em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    /* Navigation */
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(57, 4, 11, .9);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      white-space: nowrap;
+    }
+
+    .brand span { color: var(--gold); }
+
+    .nav-links {
+      display: flex;
+      gap: 26px;
+      align-items: center;
+      font-size: .83rem;
+      color: #ead9ca;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+
+    .music-button {
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--gold-light);
+      padding: 10px 14px;
+      border-radius: 40px;
+      cursor: pointer;
+      white-space: nowrap;
+      font-size: .8rem;
+    }
+
+    .music-button:hover { background: rgba(231,189,112,.1); }
+
+    /* Hero */
+
+    .hero {
+      position: relative;
+      min-height: 700px;
+      min-height: min(790px, calc(100svh - 72px));
+      display: grid;
+      place-items: center;
+      isolation: isolate;
+      overflow: hidden;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at 50% 20%, rgba(166, 45, 42, .48), transparent 48%),
+        radial-gradient(ellipse at 50% 100%, rgba(112, 20, 27, .4), transparent 55%),
+        linear-gradient(155deg, #4a0811, #30040b 75%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 16px;
+      border: 1px solid rgba(231,189,112,.19);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .hero::after {
+      content: "✦";
+      position: absolute;
+      color: rgba(231,189,112,.13);
+      font-size: 280px;
+      line-height: 1;
+      bottom: -115px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+
+    #sky {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .hero-content {
+      width: min(800px, 100%);
+      padding: 60px 15px 85px;
+      position: relative;
+    }
+
+    .hero-mark {
+      color: var(--gold);
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+      letter-spacing: .5em;
+    }
+
+    .hero h1 {
+      margin: 14px 0 0;
+      font-family: var(--serif);
+      font-size: clamp(3.4rem, 9vw, 7.4rem);
+      line-height: .94;
+      letter-spacing: -.045em;
+      font-weight: 500;
+      color: var(--gold-light);
+    }
+
+    .hero h1 span {
+      display: block;
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .nepali-title {
+      margin: 24px 0 0;
+      font-family: 'Noto Serif Devanagari', serif;
+      font-size: clamp(1.15rem, 3.4vw, 1.7rem);
+      color: #fff0d4;
+    }
+
+    .hero-rule {
+      width: 85px;
+      height: 1px;
+      background: var(--gold);
+      margin: 25px auto;
+    }
+
+    .hero-intro {
+      max-width: 520px;
+      margin: 0 auto;
+      color: #ddcbbd;
+      font-size: .95rem;
+    }
+
+    /* Custom kite */
+
+    .kite-flight {
+      width: 180px;
+      height: 245px;
+      margin: 18px auto 8px;
+      position: relative;
+      animation: kiteDrift 6s ease-in-out infinite;
+      transform-origin: center 35%;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,.2));
+    }
+
+    .kite-flight svg {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    .kite-string {
+      fill: none;
+      stroke: #f2d8a1;
+      stroke-width: 1.1;
+      stroke-dasharray: 4 5;
+      opacity: .8;
+    }
+
+    @keyframes kiteDrift {
+      0%, 100% { transform: translate(0, 0) rotate(-3deg); }
+      50% { transform: translate(22px, -14px) rotate(3deg); }
+    }
+
+    .kite-letter {
+      color: var(--gold-light);
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(1.3rem, 3.2vw, 1.8rem);
+      line-height: 1.5;
+      margin: 18px 0;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 47px;
+      border-radius: 40px;
+      padding: 12px 23px;
+      font-size: .84rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .2s, background .2s;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-gold {
+      border: 1px solid var(--gold);
+      background: var(--gold);
+      color: var(--wine);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(248,232,189,.55);
+      color: var(--gold-light);
+      background: transparent;
+    }
+
+    /* Common sections */
+
+    .section {
+      padding: 105px 0;
+    }
+
+    .section-heading {
+      max-width: 690px;
+      margin: 0 auto 52px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      margin: 12px 0 16px;
+      font-family: var(--serif);
+      font-size: clamp(2.5rem, 6vw, 4.3rem);
+      font-weight: 500;
+      line-height: 1.05;
+      color: var(--gold-light);
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    /* History */
+
+    .history {
+      background: #fff8ed;
+      color: #3b1115;
+    }
+
+    .history .section-heading h2 { color: #69101a; }
+
+    .history .section-heading p { color: #785e58; }
+
+    .history .eyebrow { color: #9a6c2c; }
+
+    .history-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .history-card {
+      padding: 32px;
+      border: 1px solid rgba(126,50,35,.15);
+      border-radius: 4px;
+      background: #fffdf8;
+    }
+
+    .history-number {
+      color: #a57536;
+      font-family: var(--serif);
+      font-size: 2.5rem;
+      line-height: 1;
+    }
+
+    .history-card h3 {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      margin: 17px 0 10px;
+      color: #6c111b;
+    }
+
+    .history-card p {
+      margin: 0;
+      color: #705d55;
+      font-size: .91rem;
+      line-height: 1.9;
+    }
+
+    .history-note {
+      margin-top: 24px;
+      padding: 24px 28px;
+      background: #f2e7d3;
+      border-left: 3px solid #a57536;
+      color: #6a5144;
+      font-size: .88rem;
+    }
+
+    /* Traditions */
+
+    .traditions { background: #39040b; }
+
+    .tradition-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .tradition-card {
+      border: 1px solid var(--border);
+      background: var(--panel);
+      padding: 30px 25px;
+      min-height: 230px;
+      transition: transform .25s, background .25s;
+    }
+
+    .tradition-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255,255,255,.065);
+    }
+
+    .tradition-icon {
+      font-size: 2rem;
+      margin-bottom: 17px;
+    }
+
+    .tradition-card h3 {
+      font-family: var(--serif);
+      font-size: 1.65rem;
+      font-weight: 600;
+      color: var(--gold);
+      margin: 0 0 9px;
+    }
+
+    .tradition-card p {
+      color: var(--muted);
+      font-size: .86rem;
+      line-height: 1.85;
+      margin: 0;
+    }
+
+    /* Blessing */
+
+    .blessing {
+      padding: 90px 0;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at center, rgba(151,34,40,.38), transparent 65%),
+        #4a0710;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .blessing h2 {
+      font-family: var(--serif);
+      font-size: clamp(2.5rem, 7vw, 4.5rem);
+      font-weight: 500;
+      color: var(--gold-light);
+      line-height: 1.1;
+      margin: 15px auto;
+    }
+
+    .blessing p {
+      max-width: 630px;
+      margin: 20px auto;
+      color: #dec8b8;
+    }
+
+    .blessing .nepali {
+      font-family: 'Noto Serif Devanagari', serif;
+      color: var(--gold);
+    }
+
+    footer {
+      padding: 35px 0;
+      text-align: center;
+      color: #bda89a;
+      font-size: .8rem;
+    }
+
+    footer strong {
+      color: var(--gold-light);
+      font-weight: 600;
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 25px;
+      transform: translate(-50%, 20px);
+      background: var(--gold-light);
+      color: var(--wine);
+      padding: 12px 20px;
+      border-radius: 30px;
+      z-index: 50;
+      font-size: .85rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: .25s;
+      width: max-content;
+      max-width: calc(100% - 32px);
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav-inner { min-height: 65px; }
+      .nav-links { display: none; }
+      .hero { min-height: auto; }
+      .hero-content { padding: 75px 12px 80px; }
+      .kite-flight { width: 145px; height: 205px; }
+      .section { padding: 75px 0; }
+      .history-grid { grid-template-columns: 1fr; }
+      .tradition-grid { grid-template-columns: 1fr; }
+      .history-card { padding: 26px; }
+      .section-heading { margin-bottom: 34px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">Dashain<span>.</span></a>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#history">Our History</a>
+        <a href="#traditions">Traditions</a>
+        <a href="#wishes">Wishes</a>
+      </div>
+
+      <button class="music-button" id="musicButton" type="button"
+              aria-pressed="false">
+        ♫ Play music
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <canvas id="sky" aria-hidden="true"></canvas>
+
+      <div class="hero-content">
+        <div class="hero-mark" aria-hidden="true">✦ ❋ ✦</div>
+
+        <div class="eyebrow">A Nepali festival · A universal blessing</div>
+
+        <h1>Happy <span>Dashain.</span></h1>
+
+        <p class="nepali-title" lang="ne">
+          विजया दशमीको हार्दिक मंगलमय शुभकामना!
+        </p>
+
+        <div class="hero-rule"></div>
+
+        <p class="hero-intro">
+          A celebration of courage, the triumph of good over evil,
+          the warmth of family, and the joy of being together.
+        </p>
+
+        <div class="kite-flight" aria-label="A traditional red and gold kite flying in the sky">
+          <svg viewBox="0 0 200 275" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="fabric" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ffe6a4"/>
+                <stop offset=".4" stop-color="#ce3434"/>
+                <stop offset="1" stop-color="#740b18"/>
+              </linearGradient>
+              <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#fff2cb"/>
+                <stop offset="1" stop-color="#d3a14c"/>
+              </linearGradient>
+            </defs>
+
+            <path d="M100 8 L185 100 L100 195 L15 100 Z"
+                  fill="url(#fabric)" stroke="#f0ce82" stroke-width="2.5"/>
+
+            <path d="M100 8 L100 195 L15 100 Z"
+                  fill="#f2bd62" opacity=".85"/>
+
+            <path d="M100 8 L185 100 L100 195 Z"
+                  fill="#971522" opacity=".78"/>
+
+            <path d="M100 8 L100 195 M15 100 L185 100"
+                  stroke="url(#gold)" stroke-width="2.8" fill="none"/>
+
+            <path d="M100 25 L165 100 L100 177 L35 100 Z"
+                  fill="none" stroke="#ffe7ad" stroke-width="1.5"/>
+
+            <path d="M100 8 L100 195" stroke="#ffe7ad"
+                  stroke-width=".8" opacity=".7"/>
+
+            <circle cx="100" cy="100" r="7" fill="#ffe6a4"/>
+            <circle cx="100" cy="100" r="3" fill="#7e1019"/>
+
+            <path class="kite-string"
+                  d="M100 195 C117 216 81 233 105 250 S104 265 113 273"/>
+
+            <path d="M93 217 L101 224 L109 217 L101 232 Z"
+                  fill="#f0ce82"/>
+
+            <path d="M98 242 L106 249 L114 242 L106 257 Z"
+                  fill="#c93535" stroke="#f0ce82" stroke-width="1"/>
+          </svg>
+        </div>
+
+        <p class="kite-letter">
+          चङ्गामा चिठी राखेर हेर्नु, उडाई पठाएको छु। 🪁❤️
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#history">Discover Dashain ↓</a>
+          <button class="btn btn-outline" id="shareButton" type="button">
+            ↗ Share the wishes
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section history" id="history">
+      <div class="container">
+        <header class="section-heading reveal">
+          <div class="eyebrow">The story behind the celebration</div>
+          <h2>A Festival Rooted in Victory</h2>
+          <p>
+            Dashain, also known as Bada Dashain, is one of Nepal's
+            most important Hindu festivals. It brings together
+            religious devotion, family traditions, and hope for a
+            brighter future.
+          </p>
+        </header>
+
+        <div class="history-grid">
+          <article class="history-card reveal">
+            <div class="history-number">01</div>
+            <h3>The Victory of Goddess Durga</h3>
+            <p>
+              In a widely celebrated Hindu story, the goddess Durga
+              battles the buffalo demon Mahishasura, whose growing
+              power threatens the world. After a fierce struggle,
+              Durga defeats him. Her victory represents the triumph
+              of good over evil and the power of courage, justice,
+              and divine strength. The first nine days of Dashain
+              are associated with the worship of Durga in many
+              traditions.
+            </p>
+          </article>
+
+          <article class="history-card reveal">
+            <div class="history-number">02</div>
+            <h3>The Meaning of Vijaya Dashami</h3>
+            <p>
+              Vijaya Dashami is the tenth day of the festival.
+              In another important Hindu tradition, it is associated
+              with Lord Rama's victory over Ravana. In Nepal, elders
+              traditionally place tika and jamara on younger family
+              members and offer blessings. It is a time for
+              reconciliation, respect, gratitude, and gathering
+              with loved ones.
+            </p>
+          </article>
+
+          <article class="history-card reveal">
+            <div class="history-number">03</div>
+            <h3>Ten Days of Celebration</h3>
+            <p>
+              The festival unfolds over several days, including
+              Ghatasthapana, the worship of the goddess during
+              Navaratri, Fulpati, Maha Ashtami, Maha Navami,
+              Vijaya Dashami, and the following days of family
+              visits and blessings. Customs vary between communities
+              and households, reflecting Nepal's rich cultural
+              diversity.
+            </p>
+          </article>
+
+          <article class="history-card reveal">
+            <div class="history-number">04</div>
+            <h3>A Tradition Passed Through Generations</h3>
+            <p>
+              For generations, Dashain has been a time for relatives
+              to reunite, families to share meals, people to travel
+              home, and communities to celebrate together. Tika,
+              jamara, swings, new clothes, festive foods, and flying
+              kites are familiar parts of the season for many
+              Nepalis. The festival continues to carry memories
+              and meaning across generations.
+            </p>
+          </article>
+        </div>
+
+        <div class="history-note reveal">
+          <strong>Why it matters:</strong> Beyond the stories of
+          victory, Dashain is a reminder of family bonds, kindness,
+          renewal, and the hope that goodness will prevail.
+          Traditions differ across Nepal's many communities.
+        </div>
+      </div>
+    </section>
+
+    <section class="section traditions" id="traditions">
+      <div class="container">
+        <header class="section-heading reveal">
+          <div class="eyebrow">The heart of Dashain</div>
+          <h2>Traditions We Treasure</h2>
+          <p>
+            The small rituals, familiar sounds, and shared moments
+            that make Dashain feel like home.
+          </p>
+        </header>
+
+        <div class="tradition-grid">
+          <article class="tradition-card reveal">
+            <div class="tradition-icon" aria-hidden="true">🌾</div>
+            <h3>Tika & Jamara</h3>
+            <p>
+              Elders offer blessings to younger family members
+              with tika and jamara, expressing wishes for happiness,
+              health, wisdom, and prosperity.
+            </p>
+          </article>
+
+          <article class="tradition-card reveal">
+            <div class="tradition-icon" aria-hidden="true">🪁</div>
+            <h3>Kites in the Sky</h3>
+            <p>
+              Colourful kites brighten the sky during Dashain.
+              For many people, they evoke childhood memories,
+              open skies, playful competition, and the excitement
+              of the festive season.
+            </p>
+          </article>
+
+          <article class="tradition-card reveal">
+            <div class="tradition-icon" aria-hidden="true">🏡</div>
+            <h3>Coming Home</h3>
+            <p>
+              Many families travel to reunite, share meals,
+              receive blessings, and reconnect. For those far
+              away, a message or call can carry a little
+              feeling of home.
+            </p>
+          </article>
+
+          <article class="tradition-card reveal">
+            <div class="tradition-icon" aria-hidden="true">🎋</div>
+            <h3>Dashain Swings</h3>
+            <p>
+              Traditional bamboo swings, often called ping,
+              are part of the festive landscape in many places.
+              They bring laughter, excitement, and memories
+              shared between generations.
+            </p>
+          </article>
+
+          <article class="tradition-card reveal">
+            <div class="tradition-icon" aria-hidden="true">🪔</div>
+            <h3>Prayer & Gratitude</h3>
+            <p>
+              Worship, family rituals, and offerings express
+              devotion and gratitude. For many, the season is
+              also an opportunity to reflect and begin again
+              with hope.
+            </p>
+          </article>
+
+          <article class="tradition-card reveal">
+            <div class="tradition-icon" aria-hidden="true">❤️</div>
+            <h3>Love & Blessings</h3>
+            <p>
+              Greetings, gifts, visits, and kind words help
+              strengthen relationships. Even a small message
+              can remind someone that they are remembered
+              and valued.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="blessing" id="wishes">
+      <div class="container reveal">
+        <div class="hero-mark" aria-hidden="true">✦ ❋ ✦</div>
+        <div class="eyebrow">From my heart to yours</div>
+
+        <h2>May Happiness Find<br>Every Home.</h2>
+
+        <p>
+          To my friends, relatives, well-wishers, and every Nepali
+          around the world: may this Dashain bring peace to your
+          home, courage to your heart, success to your dreams,
+          and beautiful moments with the people you love.
+        </p>
+
+        <p class="nepali" lang="ne">
+          तपाईं र तपाईंको परिवारमा सुख, शान्ति,
+          समृद्धि र उत्तरोत्तर प्रगतिको कामना!
+        </p>
+
+        <button class="btn btn-gold" id="shareWishBottom" type="button">
+          Send These Wishes ↗
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <strong>Made with love for Dashain 🇳🇵</strong>
+      <div>May the spirit of goodness unite us all.</div>
+      <div style="margin-top: 8px;">शुभ विजयादशमी!</div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Add your licensed or royalty-free Dashain music file here.
+       Save it beside index.html as dashain-vibe.mp3. -->
+  <audio id="dashainAudio" src="dashain-vibe.mp3"
+         loop preload="none"></audio>
+
+  <script>
+    "use strict";
+
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    );
+
+    // Accessible toast messages
+    const toast = document.getElementById("toast");
+    let toastTimer;
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add("show");
+
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.remove("show");
+      }, 3200);
+    }
+
+    // Music player: browsers require a user click before playback.
+    const audio = document.getElementById("dashainAudio");
+    const musicButton = document.getElementById("musicButton");
+
+    musicButton.addEventListener("click", async () => {
+      if (!audio.paused) {
+        audio.pause();
+        musicButton.textContent = "♫ Play music";
+        musicButton.setAttribute("aria-pressed", "false");
+        return;
+      }
+
+      try {
+        await audio.play();
+        musicButton.textContent = "Ⅱ Pause music";
+        musicButton.setAttribute("aria-pressed", "true");
+      } catch (error) {
+        showToast(
+          "Add dashain-vibe.mp3 beside index.html to play your music."
+        );
+      }
+    });
+
+    audio.addEventListener("ended", () => {
+      musicButton.textContent = "♫ Play music";
+      musicButton.setAttribute("aria-pressed", "false");
+    });
+
+    audio.addEventListener("pause", () => {
+      musicButton.textContent = "♫ Play music";
+      musicButton.setAttribute("aria-pressed", "false");
+    });
+
+    audio.addEventListener("play", () => {
+      musicButton.textContent = "Ⅱ Pause music";
+      musicButton.setAttribute("aria-pressed", "true");
+    });
+
+    // Share greeting and website URL
+    const shareText =
+      "Happy Bijaya Dashami! 🇳🇵❤️\n" +
+      "May this Dashain bring happiness, peace, prosperity, " +
+      "and beautiful moments to you and your family.\n" +
+      "विजया दशमीको हार्दिक मंगलमय शुभकामना!";
+
+    async function shareGreeting() {
+      const data = {
+        title: "Happy Bijaya Dashami 🇳🇵",
+        text: shareText,
+        url: window.location.href
+      };
+
+      if (navigator.share) {
+        try {
+          await navigator.share(data);
+        } catch (error) {
+          if (error.name !== "AbortError") {
+            showToast("Please copy the website URL from your browser.");
+          }
+        }
+        return;
+      }
+
+      try {
+        await navigator.clipboard.writeText(
+          shareText + "\n" + window.location.href
+        );
+        showToast("Greeting and website link copied!");
+      } catch (error) {
+        showToast("Copy your website address from the browser.");
+      }
+    }
+
+    document.getElementById("shareButton")
+      .addEventListener("click", shareGreeting);
+
+    document.getElementById("shareWishBottom")
+      .addEventListener("click", shareGreeting);
+
+    // Reveal sections gently as they enter the viewport
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window && !reducedMotion.matches) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      revealElements.forEach((element) => observer.observe(element));
+    } else {
+      revealElements.forEach((element) => element.classList.add("visible"));
+    }
+
+    // Lightweight golden particles in the hero sky
+    const canvas = document.getElementById("sky");
+    const context = canvas.getContext("2d");
+    const hero = document.querySelector(".hero");
+    let particles = [];
+    let width = 0;
+    let height = 0;
+    let frameId = 0;
+    let lastTime = 0;
+
+    function resizeSky() {
+      const bounds = hero.getBoundingClientRect();
+      const ratio = Math.min(window.devicePixelRatio || 1, 2);
+
+      width = bounds.width;
+      height = bounds.height;
+
+      canvas.width = Math.round(width * ratio);
+      canvas.height = Math.round(height * ratio);
+      context.setTransform(ratio, 0, 0, ratio, 0, 0);
+
+      const amount = Math.min(55, Math.floor(width / 17));
+
+      particles = Array.from({ length: amount }, () => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        radius: Math.random() * 1.5 + .4,
+        speed: Math.random() * 10 + 4,
+        phase: Math.random() * Math.PI * 2
+      }));
+    }
+
+    function drawSky(time) {
+      if (reducedMotion.matches) return;
+
+      const delta = lastTime
+        ? Math.min((time - lastTime) / 1000, .05)
+        : 0;
+
+      lastTime = time;
+      context.clearRect(0, 0, width, height);
+
+      particles.forEach((p) => {
+        p.y -= p.speed * delta;
+        p.phase += delta;
+
+        if (p.y < -4) {
+          p.y = height + 4;
+          p.x = Math.random() * width;
+        }
+
+        const alpha = .18 + (Math.sin(p.phase) + 1) * .18;
+
+        context.beginPath();
+        context.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        context.fillStyle = `rgba(248, 220, 159, ${alpha})`;
+        context.fill();
+      });
+
+      frameId = requestAnimationFrame(drawSky);
+    }
+
+    function startSky() {
+      cancelAnimationFrame(frameId);
+      context.clearRect(0, 0, width, height);
+      lastTime = 0;
+
+      if (!reducedMotion.matches) {
+        frameId = requestAnimationFrame(drawSky);
+      }
+    }
+
+    resizeSky();
+    startSky();
+
+    let resizeTimer;
+
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimer);
+
+      resizeTimer = setTimeout(() => {
+        resizeSky();
+        startSky();
+      }, 150);
+    });
+
+    reducedMotion.addEventListener("change", startSky);
+    
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+// ========================================
+// DASHain WEBSITE - JAVASCRIPT
+// ========================================
+
+// 1. MUSIC PLAYER
+const music = document.getElementById("dashainAudio");
+const musicButton = document.getElementById("musicBtn");
+
+if (music && musicButton) {
+    musicButton.addEventListener("click", async () => {
+        try {
+            if (music.paused) {
+                await music.play();
+                musicButton.textContent = "⏸ Pause Music";
+            } else {
+                music.pause();
+                musicButton.textContent = "🎵 Play Music";
+            }
+        } catch (error) {
+            console.error("Unable to play music:", error);
+            alert("Please check that dashain-vibe.mp3 is uploaded correctly.");
+        }
+    });
+
+    music.addEventListener("ended", () => {
+        musicButton.textContent = "🎵 Play Music";
+    });
+}
+
+// 2. SHARE WEBSITE
+const shareButton = document.getElementById("shareBtn");
+
+if (shareButton) {
+    shareButton.addEventListener("click", async () => {
+        const shareData = {
+            title: "Happy Bijaya Dashami!",
+            text: "Wishing you and your family a joyful Bijaya Dashami!",
+            url: window.location.href
+        };
+
+        try {
+            if (navigator.share) {
+                await navigator.share(shareData);
+            } else {
+                await navigator.clipboard.writeText(shareData.url);
+                alert("Website link copied! Share it with your friends.");
+            }
+        } catch (error) {
+            if (error.name !== "AbortError") {
+                console.error("Sharing failed:", error);
+            }
+        }
+    });
+}
+
+// 3. COPY WEBSITE LINK
+const copyButton = document.getElementById("copyBtn");
+
+if (copyButton) {
+    copyButton.addEventListener("click", async () => {
+        try {
+            await navigator.clipboard.writeText(window.location.href);
+
+            const originalText = copyButton.textContent;
+            copyButton.textContent = "✓ Link Copied!";
+
+            setTimeout(() => {
+                copyButton.textContent = originalText;
+            }, 2000);
+        } catch (error) {
+            console.error("Unable to copy link:", error);
+            prompt("Copy your website link:", window.location.href);
+        }
+    });
+}
+
+// 4. SCROLL REVEAL ANIMATION
+const revealElements = document.querySelectorAll(
+    ".reveal, .history-card, .tradition-card"
+);
+
+if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
